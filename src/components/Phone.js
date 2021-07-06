@@ -34,8 +34,6 @@ const Phone = () => {
     }
   };
   const getContact = async () => {
-    //querySnapshot is responde server firebase
-    // onSnapshot se mantiende escuchando osea que sigue cargando la data
     db.collection("conctact").onSnapshot((querySnapshot) => {
       const docs = [];
       querySnapshot.forEach((doc) => {
@@ -52,15 +50,15 @@ const Phone = () => {
   return (
     <div className="container">
       <div className="row">
-        <div class="col">
+        <div className="col">
           <Modal />
         </div>
       </div>
-      <div class="row">
-        <div class="col-4">
+      <div className="row">
+        <div className=" col-md-4  col-sm-6">
           <PhoneBookForm {...{ addOrEditContact, currentId, conctact }} />
         </div>
-        <div className="col-8 p-2">
+        <div className="col-md-6 col-sm-6 ">
           {conctact.map((conctact) => (
             <div className="card mb-1" key={conctact.id}>
               <div className="card-body">

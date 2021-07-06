@@ -1,0 +1,32 @@
+button:hover,
+button:active {
+  background-color: #33059e;
+  border-color: #33059e;
+}
+
+button:disabled,
+button:disabled:hover,
+button:disabled:active {
+  background-color: #ccc;
+  color: #292929;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+.invalid input:focus {
+  border-color: #ff8800;
+  background-color: #fbe8d2;
+}
+
+.invalid input {
+  border: 4px solid #ff0000;
+  background-color: #ff0000;
+  margin-bottom: 5rem;
+  width: 100%;
+}
+
+.error-text {
+  color: #ff0000;
+  margin-right: 7%;
+  font-style: oblique;
+}
